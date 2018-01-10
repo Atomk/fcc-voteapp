@@ -1,0 +1,31 @@
+{
+  "name": "fcc-voteapp",
+  "version": "0.0.1",
+  "description": "A full-stack voting app.",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atomk/fcc-voteapp.git"
+  },
+  "author": "Marco Fras <https://github.com/Atomk>",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^3.2.6",
+    "mongodb": "^3.0.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "freecodecamp",
+    "vote",
+    "voting",
+    "poll"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Atomk/fcc-voteapp/issues"
+  },
+  "homepage": "https://github.com/Atomk/fcc-voteapp#readme"
+}
