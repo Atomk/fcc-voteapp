@@ -10,7 +10,7 @@
   "author": "Marco Fras <https://github.com/Atomk>",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "express": "^3.2.6",
+    "express": "^4.16.2",
     "mongodb": "^3.0.1"
   },
   "scripts": {
