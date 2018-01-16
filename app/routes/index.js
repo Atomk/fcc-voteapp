@@ -16,5 +16,7 @@ module.exports = function(app, db) {
     
   app.route("/api/clicks")
     // When the server receives a GET request for this route, it will execute the getClicks function 
-    .get(clickHandler.getClicks);
+    .get(clickHandler.getClicks)
+    .post(clickHandler.addClick)
+    .delete(clickHandler.resetClicks);
 };

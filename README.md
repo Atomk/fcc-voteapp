@@ -2,5 +2,5 @@ freeVoteCamp
 ============
 
 How to run:
-- `mongod --smallfiles`
-- `npm start` in a different terminal
+- Start MongoDB: `mongod --smallfiles`
+- Start the server (use a different terminal): `npm start` or `node server.js`

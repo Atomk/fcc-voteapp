@@ -31,6 +31,34 @@ const clickHandler = function(db) {
             }
         });
     };
+    
+    /* Increase the click count by one */
+    this.addClick = function(request, response) {
+        clicksCollection
+            .findOneAndUpdate(
+                {},
+                { $inc: { clicks: 1 }},
+                (err, result) => {
+                    if (err) { throw err; }
+                    
+                    response.json(result);
+                }
+            );
+    };
+    
+    // Bring back the click counter to 0
+    this.resetClicks = function(request, response) {
+        clicksCollection
+            .updateOne(
+                {}, // First document in the collection
+                { $set: { clicks: 0 }}, // Set the field "clicks" of the found document to 0
+                (err, result) => {
+                    if (err) { throw err; }
+                    
+                    response.json(result);
+                }
+            );
+    };
 };
 
 module.exports = clickHandler;

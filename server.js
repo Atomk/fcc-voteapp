@@ -8,6 +8,7 @@ const app = express();
 
 //app.use('/public', express.static(process.cwd() + '/public'));
 app.use(express.static("public"));
+// Every client request for "/controllers" will be forwarded to the server folder "/app/controllers"
 app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 
 let mongoUrl = "mongodb://localhost:27017";
@@ -21,10 +22,6 @@ mongo.connect(mongoUrl, (err, client) => {
     
     let db = client.db("voteapp");
     routes(app, db);
-    
-    // What the hell really? Time to go back to the tutorials...
-    // https://stackoverflow.com/a/33377256 
-    //client.close();
 });
 
 let port = process.env.PORT || 3000;
